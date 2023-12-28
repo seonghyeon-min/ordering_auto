@@ -434,9 +434,9 @@ def Ordering(url, driver, dataframe, PlatformCode) :
                 
                 
                 # driver.find_element(By.XPATH, '//*[@id="orderingForm"]/div[2]/div[8]/div[1]/button[3]').click() # save
-                driver.find_element(By.XPATH, '//*[@id="orderingForm"]/div[2]/div[8]/div[2]/button[1]').click() # confirm
+                ClickEvent(driver, By.XPATH, '//*[@id="orderingForm"]/div[2]/div[8]/div[2]/button[1]')
                 time.sleep(0.5)
-                driver.find_element(By.XPATH, '//*[@id="popup-todayChangeList"]/div/div/div[3]/button').click()
+                ClickEvent(driver, By.XPATH, '//*[@id="popup-todayChangeList"]/div/div/div[3]/button')
                 time.sleep(0.5)
                 #show up pop-up
                 alert = Alert(driver)

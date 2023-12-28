@@ -13,8 +13,6 @@ os.system('python -m PyQt5.uic.pyuic -x ' + GUI_FILE_NAME + '.ui -o ' + GUI_FILE
 from gui import Ui_MainWindow
 from pandasModel import *
 
-# USER_ID = 'seonghyeon.min'
-# USER_PW = 'alstjdgus@4416'
 # QA2
 url = 'http://qt2-kic.smartdesk.lge.com/admin/main.lge?serverType=QA2'
 cpurl = 'http://qt2-kic.smartdesk.lge.com/admin/master/ordering/ordering/retrieveAppOrderingList.lge?serverType=QA2'
@@ -37,9 +35,6 @@ class Form(QMainWindow, Ui_MainWindow) :
         self.btnWork.clicked.connect(self.workOrdering)
         self.btnVerify.clicked.connect(self.Verify)
         self.btnClose.clicked.connect(self.Close)
-
-    def Viewdf(self) :
-        pass
 
     def openFile(self):
         show_filter = "All File(*.*);;txt File(*.txt);;Excel File(*.xlsx);;Excel File(*.xls)"
